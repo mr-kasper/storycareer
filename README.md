@@ -15,7 +15,7 @@ StoryCareer is built with modern web technologies to provide a seamless user exp
 
 - **Frontend**:
 
-  - [Next.js 14](https://nextjs.org/) - React framework for production
+  - [Next.js 15](https://nextjs.org/) - React framework for production
   - [TypeScript](https://www.typescriptlang.org/) - Static type checking
   - [Tailwind CSS](https://tailwindcss.com/) - Utility-first CSS framework
   - [Shadcn/ui](https://ui.shadcn.com/) - UI component library
