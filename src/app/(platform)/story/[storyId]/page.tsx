@@ -8,7 +8,7 @@ import ImageForm from './_components/imageForm';
 import DeleteStory from './_components/deleteStory';
 import { prisma } from '../../../../../prisma/client';
 
-const EditStoryPage = async ({ params }: { params: { storyId: string } }) => {
+const EditStoryPage = async ({ params }: { params: Promise<{ storyId: string }> }) => {
   const { userId } = await auth();
   const { storyId: id } = await params;
 

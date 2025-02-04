@@ -2,7 +2,10 @@ import { auth } from '@clerk/nextjs/server';
 import { NextRequest, NextResponse } from 'next/server';
 import { prisma } from '../../../../../prisma/client';
 
-export async function PATCH(req: NextRequest, { params }: { params: { storyId: string } }) {
+export async function PATCH(
+  req: NextRequest,
+  { params }: { params: Promise<{ storyId: string }> }
+) {
   const { userId } = await auth();
 
   if (!userId) {
@@ -33,7 +36,10 @@ export async function PATCH(req: NextRequest, { params }: { params: { storyId: s
   return NextResponse.json(updatedStory, { status: 201 });
 }
 
-export async function DELETE(req: NextRequest, { params }: { params: { storyId: string } }) {
+export async function DELETE(
+  req: NextRequest,
+  { params }: { params: Promise<{ storyId: string }> }
+) {
   const { userId } = await auth();
 
   if (!userId) {
