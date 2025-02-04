@@ -1,6 +1,5 @@
 import { auth } from '@clerk/nextjs/server';
 import { redirect } from 'next/navigation';
-import React from 'react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import TitleForm from './_components/titleForm';

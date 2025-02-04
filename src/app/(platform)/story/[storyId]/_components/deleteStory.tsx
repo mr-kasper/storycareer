@@ -1,19 +1,19 @@
 'use client';
 
 import { Button } from '@/components/ui/button';
-import React from 'react';
 import { Trash, Loader } from 'lucide-react';
 import { Story } from '@prisma/client';
 import axios from 'axios';
 import { useRouter } from 'next/navigation';
 import { toast } from 'sonner';
+import { useState } from 'react';
 
 interface Props {
   initialData: Story;
 }
 
 const DeleteStory = ({ initialData }: Props) => {
-  const [isDeleting, setIsDeleting] = React.useState(false);
+  const [isDeleting, setIsDeleting] = useState(false);
   const router = useRouter();
 
   const handleDelete = async () => {

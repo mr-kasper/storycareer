@@ -1,6 +1,5 @@
 'use client';
 
-import React from 'react';
 import { useAuth } from '@clerk/nextjs';
 import { Heart } from 'lucide-react';
 import { Save, Story } from '@prisma/client';

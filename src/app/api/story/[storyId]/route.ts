@@ -13,7 +13,7 @@ export async function PATCH(req: NextRequest, { params }: { params: { storyId: s
 
   const existingStory = await prisma.story.findUnique({
     where: {
-      id: params.storyId,
+      id: (await params).storyId,
     },
   });
 
@@ -23,7 +23,7 @@ export async function PATCH(req: NextRequest, { params }: { params: { storyId: s
 
   const updatedStory = await prisma.story.update({
     where: {
-      id: params.storyId,
+      id: (await params).storyId,
     },
     data: {
       ...body,
@@ -42,7 +42,7 @@ export async function DELETE(req: NextRequest, { params }: { params: { storyId: 
 
   const existingStory = await prisma.story.findUnique({
     where: {
-      id: params.storyId,
+      id: (await params).storyId,
     },
   });
 
@@ -52,7 +52,7 @@ export async function DELETE(req: NextRequest, { params }: { params: { storyId: 
 
   await prisma.story.delete({
     where: {
-      id: params.storyId,
+      id: (await params).storyId,
     },
   });
 

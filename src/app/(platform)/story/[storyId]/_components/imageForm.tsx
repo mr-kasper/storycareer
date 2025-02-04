@@ -1,6 +1,5 @@
 'use client';
 
-import React from 'react';
 import axios from 'axios';
 import { ImageIcon, Pencil, PlusCircle } from 'lucide-react';
 import { toast } from 'sonner';
@@ -10,13 +9,14 @@ import { Story } from '@prisma/client';
 
 import { Button } from '@/components/ui/button';
 import FileUploader from '@/components/fileUploader';
+import { useState } from 'react';
 
 interface Props {
   initialData: Story;
 }
 
 const ImageForm = ({ initialData }: Props) => {
-  const [isEditing, setIsEditing] = React.useState(false);
+  const [isEditing, setIsEditing] = useState(false);
   const router = useRouter();
 
   const toggleEdit = () => setIsEditing((current) => !current);

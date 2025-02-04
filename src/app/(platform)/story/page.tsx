@@ -1,7 +1,6 @@
 import { Button } from '@/components/ui/button';
 import { Plus } from 'lucide-react';
 import Link from 'next/link';
-import React from 'react';
 import { Separator } from '@/components/ui/separator';
 import { DataTable } from '@/components/data-table';
 import { columns } from '@/components/platform/columns';

@@ -11,7 +11,7 @@ export async function DELETE(req: NextRequest, { params }: { params: { saveId: s
 
   const existingSave = await prisma.save.findUnique({
     where: {
-      id: params.saveId,
+      id: (await params).saveId,
     },
   });
 
@@ -21,7 +21,7 @@ export async function DELETE(req: NextRequest, { params }: { params: { saveId: s
 
   await prisma.save.delete({
     where: {
-      id: params.saveId,
+      id: (await params).saveId,
     },
   });
 

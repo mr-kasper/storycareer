@@ -1,7 +1,5 @@
 'use client';
 
-import React from 'react';
-
 import {
   ColumnDef,
   flexRender,
@@ -23,6 +21,7 @@ import {
 
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
+import { useState } from 'react';
 
 interface DataTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[];
@@ -37,7 +36,7 @@ export function DataTable<TData, TValue>({
   placeholder,
   searchValue,
 }: DataTableProps<TData, TValue>) {
-  const [columnFilters, setColumnFilters] = React.useState<ColumnFiltersState>([]);
+  const [columnFilters, setColumnFilters] = useState<ColumnFiltersState>([]);
 
   const table = useReactTable({
     data,

@@ -1,4 +1,3 @@
-import React from 'react';
 import { auth } from '@clerk/nextjs/server';
 import Image from 'next/image';
 import { ImageIcon, ArrowRight } from 'lucide-react';

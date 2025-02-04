@@ -1,10 +1,10 @@
 'use client';
 
-import React from 'react';
 import { Button } from '@/components/ui/button';
 import axios from 'axios';
 import { Loader, Trash } from 'lucide-react';
 import { useRouter } from 'next/navigation';
+import { useState } from 'react';
 import { toast } from 'sonner';
 
 interface Props {
@@ -12,7 +12,7 @@ interface Props {
 }
 
 const RemoveSave = ({ saveId }: Props) => {
-  const [isRemoving, setIsRemoving] = React.useState(false);
+  const [isRemoving, setIsRemoving] = useState(false);
   const router = useRouter();
 
   const handleRemoveSave = async () => {

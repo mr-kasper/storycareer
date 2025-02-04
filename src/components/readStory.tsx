@@ -1,5 +1,4 @@
 import { Story } from '@prisma/client';
-import React from 'react';
 
 import {
   AlertDialog,
