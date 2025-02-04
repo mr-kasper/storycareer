@@ -25,6 +25,14 @@ StoryCareer is built with modern web technologies to provide a seamless user exp
   - [Clerk](https://clerk.com/) - Authentication and user management
 
 - **Database & ORM**:
+
   - [Prisma](https://www.prisma.io/) - ORM for database operations
   - [Neon](https://neon.tech/) - Serverless Postgres platform designed to help you build reliable and scalable applications faster
   - [Uploadthing](https://uploadthingy.com/) - File upload service
+
+- **Deployment**:
+  - [Vercel](https://vercel.com/) - Hosting and deployment
+
+## Live Demo
+
+[StoryCareer](https://storycareer-nmv5.vercel.app/)
